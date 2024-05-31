@@ -1,0 +1,5 @@
+@EndUserText.label: 'PO from ERP'
+define service Zui_po_erp {
+  expose ZCE_PurchaseOrderItemsERP as POERP;
+  expose ZI_PurchaseOrderComment   as Comment;
+}

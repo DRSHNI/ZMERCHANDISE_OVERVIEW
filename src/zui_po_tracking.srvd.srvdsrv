@@ -1,0 +1,4 @@
+@EndUserText.label: 'PO Tracking by Vendor'
+define service ZUI_PO_Tracking {
+  expose ZC_PurchaseOrderTracking;
+}

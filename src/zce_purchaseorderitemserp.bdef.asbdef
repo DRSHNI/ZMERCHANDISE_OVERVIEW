@@ -1,0 +1,28 @@
+unmanaged implementation in class zbp_ce_purchaseorderitemserp unique;
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZCE_PurchaseOrderItemsERP alias POItems
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  //create;
+  update;
+  //delete;
+
+  association _comments;
+
+  field ( readonly ) PurchasingDoc, ColorCode, CompanyCode, Variant, PlmId, FactoryVendor, OrderReason,
+  BuyStrategy, FloorsetDate, Brand, Category,  image_url;
+
+}
+
+define behavior for ZI_PurchaseOrderComment alias Comments
+lock dependent by _Header
+authorization dependent by _Header
+{
+  field ( readonly ) PurchasingDoc, ColorCode, CreatedOn;
+  association _Header;
+  create;
+}

@@ -1,0 +1,8 @@
+@EndUserText.label: 'Smart Merchandise Production'
+define service ZUI_MerchandiseProduction {
+  expose ZCE_PurchaseOverviewFilterOVP as PurchaseOverviewFilter;
+  expose ZCE_PurchaseVolumeOVP         as PurchaseVolume;
+  expose ZCE_PurchaseViewByVendor      as VendorPurchase;
+  expose ZCE_SeasonTopStylesOvp        as SeasonTopStyles;
+  expose ZCE_TopCalloutsOvp            as TopCallouts;
+}
